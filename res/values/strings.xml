@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">手机安全卫士</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_lost_found">LostFoundActivity</string>
+    <string name="title_activity_lock_set1">LockSet1Activity</string>
+    <string name="title_activity_lock_set2">LockSet2Activity</string>
+    <string name="title_activity_lock_set3">LockSet3Activity</string>
+    <string name="title_activity_lock_set4">LockSet4Activity</string>
+    <string name="title_activity_select_contact">SelectContactActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_advence_tools">AdvenceToolsActivity</string>
+    <string name="title_activity_look_address">LookAddressActivity</string>
+    <string name="title_activity_tel_address">TelAddressActivity</string>
+    <string name="title_activity_call_sms">CallSmsActivity</string>
+    <string name="title_activity_package">PackageActivity</string>
+    <string name="title_activity_process_deal">ProcessDealActivity</string>
+    <string name="title_activity_soft">SoftActivity</string>
+    <string name="title_activity_soft_manager">SoftManagerActivity</string>
+    <string name="title_activity_task_handle">TaskHandleActivity</string>
+    <string name="title_activity_task_setting">TaskSettingActivity</string>
+    <string name="title_activity_app_lock">AppLockActivity</string>
+    <string name="title_activity_lock_app_wpasswd">LockAppWPasswdActivity</string>
+
+</resources>

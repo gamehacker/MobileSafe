@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jrrjw.mobilesafe.LostFoundActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        style="@style/linear_title"
+        android:gravity="center" >
+
+        <TextView
+            style="@style/tv_title"
+            android:layout_marginBottom="10dip"
+            android:gravity="center"
+            android:text="手机防盗" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_top"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            android:id="@+id/tv_safeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安全号码"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_lostfound_safenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:text="1672569383"
+            android:textSize="20sp" >
+        </TextView>
+
+        <View
+            android:id="@+id/v_line1"
+            android:layout_width="wrap_content"
+            android:layout_height="0.1dip"
+            android:layout_below="@id/tv_safeNumber"
+            android:layout_marginTop="15dip"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/tv_isopen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_line1"
+            android:layout_marginTop="15dip"
+            android:text="是否开启保护"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_lostfound_islock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/v_line1"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="15dip"
+            android:src="@drawable/lock"
+            android:textSize="20sp" >
+        </ImageView>
+
+        <View
+            android:id="@+id/v_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="0.1dip"
+            android:layout_below="@id/tv_isopen"
+            android:layout_marginTop="15dip"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_line2"
+            android:layout_marginTop="15dip"
+            android:clickable="true"
+            android:text="重新进入设置向导"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lv_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_body"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:background="#316DBD"
+            android:gravity="center"
+            android:text="功能列表"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@drawable/protectionlock"
+            android:text="GPS追踪： #*location*#"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@drawable/protectionlock"
+            android:text="播放报警音乐： #*alarm*#"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@drawable/protectionlock"
+            android:text="远程删除数据： #*wipedata*#"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:drawableLeft="@drawable/protectionlock"
+            android:text="远程锁屏： #*lockscreen*#"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

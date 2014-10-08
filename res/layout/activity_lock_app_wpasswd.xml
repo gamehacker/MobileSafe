@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_passwd_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请输入密码"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/et_passwd_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码 " />
+
+    <Button
+        android:id="@+id/bt_passwd_confirm"
+        android:layout_width="wrap_content"
+        android:onClick="confirm"
+        android:layout_height="wrap_content"
+        android:text="确认" />
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_callsms_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#316DBD" >
+
+        <ImageView
+            android:id="@+id/iv_setting_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dip"
+            android:clickable="true"
+            android:onClick="setBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_setting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="10dip"
+            android:text="程序锁设置"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/bt_callsms_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="密码:12" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_callsms_top" >
+
+        <LinearLayout
+            android:id="@+id/ll_applock_load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/pb_applock_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在加载..." />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_applock_appname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+        
+         <TextView
+            android:id="@+id/tv_applock_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text="加载程序"
+            android:visibility="gone"
+            android:textColor="#ffffff" />
+    </FrameLayout>
+
+</RelativeLayout>

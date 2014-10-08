@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_header" />
+
+    <ImageView
+        android:id="@+id/iv_splash_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:src="@drawable/splash" />
+
+    <TextView
+        android:id="@+id/tv_splash_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_splash_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:text="版本 1.0"
+        android:textColor="#88000000"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/pro_splash_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_splash_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dip" />
+
+    <TextView
+        android:id="@+id/tv_splash_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pro_splash_load"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:text="下载"
+        android:textColor="#88000000"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

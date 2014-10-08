@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/linear_title" >
+
+        <TextView
+            style="@style/tv_title"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="0dip"
+            android:text="高级功能" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lookaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:clickable="true"
+        android:onClick="llLookAddress"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="address"
+            android:src="@drawable/lookaddress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="3dip"
+            android:text="归属地查询"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line"
+        android:layout_marginTop="5dip" />
+
+    <LinearLayout
+        android:id="@+id/ll_sms_backup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:clickable="true"
+        android:onClick="llSmsBackup"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="address"
+            android:src="@drawable/lookaddress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="3dip"
+            android:text="短信备份到本地"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line"
+        android:layout_marginTop="5dip" />
+
+    <LinearLayout
+        android:id="@+id/ll_sms_recover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:clickable="true"
+        android:onClick="llSmsRecover"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="address"
+            android:src="@drawable/lookaddress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="3dip"
+            android:text="短信还原到手机"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line"
+        android:layout_marginTop="5dip" />
+
+    
+     <LinearLayout
+        android:id="@+id/ll_applock_lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:clickable="true"
+        android:onClick="llAppLock"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="address"
+            android:src="@drawable/lookaddress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="3dip"
+            android:text="程序锁设置"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line"
+        android:layout_marginTop="5dip" />
+</LinearLayout>

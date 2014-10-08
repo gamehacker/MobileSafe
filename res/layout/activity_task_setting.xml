@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jrrjw="http://schemas.android.com/apk/res/com.jrrjw.mobilesafe"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_taskset_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#316DBD"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_taskset_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="setBack"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_taskset_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:gravity="center"
+            android:text="进程设置中心"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <com.jrrjw.mobilesafe.ui.SettingItem
+        android:id="@+id/si_taskset_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        jrrjw:des_off="锁屏清理进程已经关闭"
+        jrrjw:des_on="锁屏清理进程已经开启"
+        jrrjw:ttitle="设置锁屏清理进程" />
+
+</LinearLayout>

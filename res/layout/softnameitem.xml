@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/iv_soft_icon"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_soft_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_soft_icon"
+        android:text="设置启动更新"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_soft_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_soft_name"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_soft_icon"
+        android:text="更新软件已开启"
+        android:textColor="#88000000"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.2dip"
+        android:layout_below="@id/tv_tip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="#000000" />
+
+</RelativeLayout>

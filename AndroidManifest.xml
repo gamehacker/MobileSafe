@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jrrjw.mobilesafe"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="com.jrrjw.mobilesafe" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name=".LostFoundActivity"
+            android:label="@string/title_activity_lost_found" >
+        </activity>
+        <activity
+            android:name=".LockSet1Activity"
+            android:label="@string/title_activity_lock_set1" >
+        </activity>
+        <activity
+            android:name=".LockSet2Activity"
+            android:label="@string/title_activity_lock_set2" >
+        </activity>
+        <activity
+            android:name=".LockSet3Activity"
+            android:label="@string/title_activity_lock_set3" >
+        </activity>
+        <activity
+            android:name=".LockSet4Activity"
+            android:label="@string/title_activity_lock_set4" >
+        </activity>
+        <activity
+            android:name=".SelectContactActivity"
+            android:label="@string/title_activity_select_contact" >
+        </activity>
+
+        <receiver android:name=".br.SimRecever" >
+            <intent-filter android:priority="2147483647" >
+                <!-- 开机启动时 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".br.SmsRecever" >
+            <intent-filter android:priority="1000" >
+                <!-- 电话短信接受到时 -->
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.GpsService" >
+        </service>
+
+        <activity
+            android:name=".AdvenceToolsActivity"
+            android:label="@string/title_activity_advence_tools" >
+        </activity>
+        <activity
+            android:name=".LookAddressActivity"
+            android:label="@string/title_activity_look_address" >
+        </activity>
+        <activity
+            android:name=".TelAddressActivity"
+            android:label="@string/title_activity_tel_address" >
+        </activity>
+
+        <service android:name=".service.TelAddressService" >
+        </service>
+        <service android:name=".service.CallSmsService" >
+        </service>
+
+        <activity
+            android:name=".CallSmsActivity"
+            android:label="@string/title_activity_call_sms" >
+        </activity>
+        <activity
+            android:name=".PackageActivity"
+            android:label="@string/title_activity_package" >
+        </activity>
+        <activity
+            android:name=".ProcessDealActivity"
+            android:label="@string/title_activity_process_deal" >
+        </activity>
+        <activity
+            android:name=".SoftActivity"
+            android:label="@string/title_activity_soft" >
+        </activity>
+        <activity
+            android:name=".SoftManagerActivity"
+            android:label="@string/title_activity_soft_manager" >
+        </activity>
+        <activity
+            android:name=".TaskHandleActivity"
+            android:label="@string/title_activity_task_handle" >
+        </activity>
+        <activity
+            android:name=".TaskSettingActivity"
+            android:label="@string/title_activity_task_setting" >
+        </activity>
+
+        <service android:name=".service.TaskKillService" >
+        </service>
+
+        <receiver android:name=".br.MyWidget" >
+            <intent-filter>
+                <!--桌面控件更新时 -->
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/process_widget_provider" />
+        </receiver>
+
+        <service android:name=".service.TaskKillWidgetService" >
+        </service>
+
+        <receiver android:name=".br.KillTaskRecever" >
+            <intent-filter>
+                <!-- 自定义接受者 -->
+                <action android:name="com.jrrjw.killTask" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".AppLockActivity"
+            android:label="@string/title_activity_app_lock" >
+        </activity>
+        <activity
+            android:name=".LockAppWPasswdActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_lock_app_wpasswd"
+            android:launchMode="singleInstance" >
+        </activity>
+        <activity android:name="com.jrrjw.mobilesafe.CleanCacheActivity" >
+        </activity>
+         <activity android:name="com.jrrjw.mobilesafe.CleanCacheActivity1" >
+        </activity>
+        <activity android:name="com.jrrjw.mobilesafe.CleanSDActivity" >
+        </activity>
+        <activity android:name="com.jrrjw.mobilesafe.CleanActivity" >
+        </activity>
+
+        <service android:name="com.jrrjw.mobilesafe.service.LockAppService" >
+        </service>
+    </application>
+
+</manifest>

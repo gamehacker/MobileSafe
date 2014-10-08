@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TextView">
+        <attr name="ttitle" format="string" />
+        <attr name="des_on" format="string" />
+        <attr name="des_off" format="string" />
+    </declare-styleable>
+   <!--  <declare-styleable name="SlipButton">
+        <attr name="bg" format="reference" />
+        <attr name="slipImg" format="reference" />
+        <attr name="slipOn" format="boolean"></attr>
+    </declare-styleable> -->
+
+</resources>
